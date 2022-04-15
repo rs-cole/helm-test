@@ -1,7 +1,7 @@
 
 ## Standard Priority Order
 
- 1. Deployment specific (e.g. owlbear, flextronics)
+ 1. Deployment specific (e.g. client)
  2. Environment specific (e.g. dev, prd)
  3. Base (values.yaml)
 
