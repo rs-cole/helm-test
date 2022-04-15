@@ -1,0 +1,25 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-test-app
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: helm-test-app
+  template:
+    metadata:
+      labels:
+        app: helm-test-app
+        key1: "{{ .Values.KEY1 }}"
+        key2: "{{ .Values.KEY2 }}"
+        key3: "{{ .Values.KEY3 }}"
+        key4: "{{ .Values.KEY4 }}"
+    spec:
+      containers:
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+        name: helm-test-app
+        ports:
+        - containerPort: 80
