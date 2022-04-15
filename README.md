@@ -1,6 +1,4 @@
 
-
-
 ## Standard Priority Order
 
  1. Deployment specific (e.g. owlbear, flextronics)
@@ -8,7 +6,7 @@
  3. Base (values.yaml)
 
  ```
-helm install --dry-run --debug helm-test . -f ./stack-vars/dev/_global.yml,./stack-vars/dev/owlbear.yml
+helm install --dry-run --debug helm-test . -f ./stack-vars/dev/_global.yml,./stack-vars/dev/pocclient.yml
 
 NAME: helm-test
 LAST DEPLOYED: Fri Apr 15 12:19:27 2022
@@ -37,7 +35,7 @@ KEY4: owlbear-dev-value
 Note, all of the deployment specific values will be overridden via the env specific
 
 ```
-helm install --dry-run --debug helm-test . -f ./stack-vars/dev/owlbear.yml,./stack-vars/dev/_global.yml
+helm install --dry-run --debug helm-test . -f ./stack-vars/dev/pocclient.yml,./stack-vars/dev/_global.yml
 
 NAME: helm-test
 LAST DEPLOYED: Fri Apr 15 12:24:37 2022
